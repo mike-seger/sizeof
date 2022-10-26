@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        from "${projectDir}/src/main/resources/META-INF/MANIFEST.MF"
+    }
+}
+
+dependencies {
+    implementation 'org.openjdk.jol:jol-core:0.16'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
