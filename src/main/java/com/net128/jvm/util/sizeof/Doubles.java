@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class Doubles {
+public class Doubles extends RandomCounting {
 	public Data data;
 	public class Data {
 		public Map<String, double[]> attrValues;
@@ -14,12 +14,13 @@ public class Doubles {
 		}
 		private double [] getDoubles(int size) {
 			var f = new double[size];
-			for(var i=0;i<size;) f[i++] = new Random(123).nextDouble();
+			for(var i=0;i<size;) f[i++] = nd();
 			return f;
 		}
 	}
 
 	public Doubles(int size, int depth) {
+		setN(size*depth);
 		this.data = new Data(size, depth);
 	}
 }

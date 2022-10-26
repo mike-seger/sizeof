@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 repositories {
@@ -9,3 +10,8 @@ repositories {
 dependencies {
     implementation 'org.openjdk.jol:jol-core:0.16'
 }
+
+application {
+    mainClassName = project.hasProperty("mainClass") ? project.getProperty("mainClass") : "com.net128.jvm.util.sizeof.TestSizeof"
+}
+

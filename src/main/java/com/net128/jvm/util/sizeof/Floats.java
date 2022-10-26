@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class Floats {
+public class Floats extends RandomCounting {
 	public Data data;
 	public class Data {
 		public Map<String, float[]> attrValues;
@@ -14,12 +14,13 @@ public class Floats {
 		}
 		private float [] getFloats(int size) {
 			var f = new float[size];
-			for(var i=0;i<size;) f[i++] = new Random(123).nextFloat();
+			for(var i=0;i<size;) f[i++] = nf();
 			return f;
 		}
 	}
 
 	public Floats(int size, int depth) {
+		setN(size*depth);
 		this.data = new Data(size, depth);
 	}
 }
