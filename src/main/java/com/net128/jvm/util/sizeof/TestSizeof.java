@@ -2,7 +2,7 @@ package com.net128.jvm.util.sizeof;
 
 import org.openjdk.jol.info.GraphLayout;
 
-public class InstrumentationExample {
+public class TestSizeof {
     public static void main(String[] arguments) {
         var floats = new Floats(1000, 12);
         var doubles = new Doubles(1000, 12);
