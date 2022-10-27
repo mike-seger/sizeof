@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class N20FloatAttrObjects extends RandomCounting {
+public class N20FloatAttrObjects extends StatsProvider {
 	public Data data;
 	Random r = new Random(123);
 	public class Data {
@@ -15,6 +15,7 @@ public class N20FloatAttrObjects extends RandomCounting {
 			public float attribute03 = nf();
 			public float attribute04 = nf();
 			public float attribute05 = nf();
+			public float attribute06 = nf();
 			public float attribute07 = nf();
 			public float attribute08 = nf();
 			public float attribute09 = nf();
@@ -24,6 +25,7 @@ public class N20FloatAttrObjects extends RandomCounting {
 			public float attribute13 = nf();
 			public float attribute14 = nf();
 			public float attribute15 = nf();
+			public float attribute16 = nf();
 			public float attribute17 = nf();
 			public float attribute18 = nf();
 			public float attribute19 = nf();
@@ -38,7 +40,7 @@ public class N20FloatAttrObjects extends RandomCounting {
 	}
 
 	public N20FloatAttrObjects(int size) {
-		setN(size*20);
+		setN(size);
 		this.data = new Data(size);
 	}
 }

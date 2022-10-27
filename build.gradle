@@ -13,5 +13,6 @@ dependencies {
 
 application {
     mainClassName = project.hasProperty("mainClass") ? project.getProperty("mainClass") : "com.net128.jvm.util.sizeof.TestSizeof"
+    applicationDefaultJvmArgs = ["-Xms8192m", "-Xmx8192m"]
 }
 

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class Floats extends RandomCounting {
+public class Floats extends StatsProvider {
 	public Data data;
 	public class Data {
 		public Map<String, float[]> attrValues;
@@ -20,7 +20,7 @@ public class Floats extends RandomCounting {
 	}
 
 	public Floats(int size, int depth) {
-		setN(size*depth);
+		setN(size);
 		this.data = new Data(size, depth);
 	}
 }

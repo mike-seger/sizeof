@@ -2,7 +2,7 @@ package com.net128.jvm.util.sizeof;
 
 import java.util.Random;
 
-public class RandomCounting {
+public class StatsProvider {
 	private long count;
 	private long n;
 	private final Random r = new Random(123);
@@ -16,6 +16,6 @@ public class RandomCounting {
 	}
 
 	public long getCount() { return count; }
-	public long getN() { return count; }
+	public long getN() { return n; }
 	public void setN(int n) { this.n = n; }
 }

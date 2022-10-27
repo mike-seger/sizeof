@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class N4FloatAttrObjects extends RandomCounting {
+public class N4FloatAttrObjects extends StatsProvider {
 	public Data data;
 	Random r = new Random(123);
 	public class Data {
@@ -24,7 +24,7 @@ public class N4FloatAttrObjects extends RandomCounting {
 	}
 
 	public N4FloatAttrObjects(int size) {
-		setN(size*4);
+		setN(size);
 		this.data = new Data(size);
 	}
 }
