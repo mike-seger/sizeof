@@ -6,6 +6,9 @@ public class StatsProvider {
 	private long count;
 	private long n;
 	private final Random r = new Random(123);
+	public float nfnc() {
+		return r.nextFloat();
+	}
 	public float nf() {
 		count++;
 		return r.nextFloat();

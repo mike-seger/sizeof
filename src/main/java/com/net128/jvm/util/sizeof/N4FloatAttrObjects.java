@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class N4FloatAttrObjects extends StatsProvider {
 	public Data data;
-	Random r = new Random(123);
+
 	public class Data {
 		@SuppressWarnings("unused")
 		public class Item {

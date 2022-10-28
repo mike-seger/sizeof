@@ -8,11 +8,25 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.slf4j:slf4j-jdk14:1.7.25'
     implementation 'org.openjdk.jol:jol-core:0.16'
+    implementation 'org.ehcache:sizeof:0.4.3'
+}
+
+mainClassName = "com.net128.jvm.util.sizeof.TestSizeof"
+
+jar {
+    manifest {
+        attributes "Main-Class": "$mainClassName"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }
 
 application {
-    mainClassName = project.hasProperty("mainClass") ? project.getProperty("mainClass") : "com.net128.jvm.util.sizeof.TestSizeof"
+    mainClassName = project.hasProperty("mainClass") ? project.getProperty("mainClass") : "$mainClassName"
     applicationDefaultJvmArgs = ["-Xms8192m", "-Xmx8192m"]
 }
 
